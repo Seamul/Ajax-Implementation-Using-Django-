@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>seam</title>
+</head>
+<body>
+	<p>seam</p>
+	{%for i in images%}
+	<img src="{{i.img}}">
+	
+	{%endfor%}
+	<form action="." method="post">
+		{{ form.as_p }}
+		{% csrf_token %}
+		<input type="submit" name="submit">
+	</form>
+</body>
+</html>
